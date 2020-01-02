@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppThemeLight">
-        <activity android:name=".DescribeActivity"></activity>
+        <activity android:name=".InterestActivity"></activity>
+        <activity android:name=".SyncContactActivity" />
+        <activity android:name=".DescribeActivity" />
         <activity android:name=".ProfilePictureActivity" />
         <activity android:name=".PasswordActivity" />
         <activity android:name=".RegisterActivity" />

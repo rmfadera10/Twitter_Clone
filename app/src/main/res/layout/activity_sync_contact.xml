@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?backgroundColor"
-    tools:context=".DescribeActivity">
-
-
+    tools:context=".SyncContactActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
@@ -41,69 +39,69 @@
             android:textSize="30sp"
             android:textStyle="bold"
             android:textColor="@color/colorBlack"
-            android:text="Describe yourself" />
+            android:text="Connect your address book to find people you may know to Twitter." />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/syscontacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="300dp"
+        android:gravity="center"
+        android:background="@drawable/layout_top_line_only">
+
+        <Button
+            android:id="@+id/btn_password"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_round_blue"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Sync contacts"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/notnow"
+        android:layout_width="match_parent"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/syscontacts">
+
+        <TextView
+            android:id="@+id/txt_not_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Not now"
+            android:textColor="@color/twitterBlue"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="150dp"
+        android:layout_width="match_parent"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/notnow">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="15sp"
             android:textStyle="bold"
-            android:text="What makes you special? Don't think too hard, just have fun with it. " />
-
+            android:text="@string/str_syncconotacts"/>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:paddingLeft="40dp"
-        android:paddingRight="40dp"
-        android:layout_below="@+id/layout_linear"
-        android:orientation="vertical"
-        android:layout_marginTop="30dp"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:id="@+id/et_name"
-                android:hint="Bio"
-                android:textColor="@color/colorBlack" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:background="@drawable/layout_top_line_only"
-        android:layout_alignParentBottom="true">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:text="Skip for now"
-            android:textColor="@color/twitterBlue"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:layout_height="40dp"
-            android:text="@string/str_next"
-            android:id="@+id/btn_describe"
-            android:background="@drawable/btn_round_blue"
-            android:textAllCaps="false"
-            style="?android:attr/borderlessButtonStyle"
-            android:textSize="15sp"
-            android:layout_alignParentRight="true"
-            android:textColor="@color/colorWhite"/>
-
-    </RelativeLayout>
 
 </RelativeLayout>

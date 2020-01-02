@@ -5,22 +5,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.TextView;
 
-public class DescribeActivity extends AppCompatActivity {
+public class SyncContactActivity extends AppCompatActivity {
 
-    private Button btn_describe;
+    private TextView txt_not_now;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_describe);
+        setContentView(R.layout.activity_sync_contact);
 
-        btn_describe=findViewById(R.id.btn_describe);
-        btn_describe.setOnClickListener(new View.OnClickListener() {
+        txt_not_now=findViewById(R.id.txt_not_now);
+        txt_not_now.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(DescribeActivity.this, SyncContactActivity.class);
+                Intent intent=new Intent(SyncContactActivity.this, InterestActivity.class);
                 startActivity(intent);
             }
         });
