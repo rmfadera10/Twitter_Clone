@@ -5,23 +5,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.Button;
 
-public class LoginActivity extends AppCompatActivity {
+public class PasswordActivity extends AppCompatActivity {
 
-    private TextView tv_sign_up;
+    private Button btn_password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_password);
 
-        tv_sign_up=findViewById(R.id.tv_sign_up);
+        btn_password=findViewById(R.id.btn_password);
 
-        tv_sign_up.setOnClickListener(new View.OnClickListener() {
+        btn_password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(LoginActivity.this, SignUpActivity.class);
+                Intent intent=new Intent(PasswordActivity.this, ProfilePictureActivity.class);
                 startActivity(intent);
             }
         });
